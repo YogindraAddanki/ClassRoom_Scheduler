@@ -1,0 +1,62 @@
+.zoro
+{
+	height: 100%;
+	width: 100%;
+}
+
+.logo
+{
+	padding-left: 80px;
+	float: left;
+}
+li a
+{
+	text-decoration: none;
+} 
+nav
+{
+	float: right;
+	word-spacing: 30px;
+	padding: 10px;
+}
+nav li
+{
+	display: inline-block;
+}
+section .chop
+{
+	background-image: url("bg3.jpg");
+	height: 530px;
+}
+.luffy
+{
+	height: 300px;
+	width: 450px;
+	background-color: #922121;
+	margin: 50px auto;
+	opacity: .6;
+	color: white;
+}
+section .usop
+{
+	background-image: url("bgd.jpg");
+	height: 530px;
+}
+.box
+{
+	height: 400px;
+	width: 450px;
+	background-color: #0d0c0c;
+	margin: 50px auto;
+	opacity: .9;
+	color: whitesmoke;
+}
+input
+{
+	height: 20px;
+	width: 250px;
+}
+form .login
+{
+	margin: auto 100px;
+}
