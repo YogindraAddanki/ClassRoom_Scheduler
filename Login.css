@@ -1,9 +1,27 @@
+
 .zoro
 {
 	height: 100%;
 	width: 100%;
 }
-
+header
+{
+	height: 80px;
+	width: 1525px;
+	background-color: blanchedalmond;
+}
+section
+{
+	height: 580px;
+	width: 1525px;
+	background-color: lightcoral;
+}
+footer
+{
+	height: 75px;
+	width: 1525px;
+	background-color: blanchedalmond;
+}
 .logo
 {
 	padding-left: 80px;
@@ -59,4 +77,15 @@ input
 form .login
 {
 	margin: auto 100px;
+}
+/*-----------------------------------registration--------------------------*/
+.box1
+{
+	height: 520px;
+	width: 450px;
+	background-color: #0d0c0c;
+	margin: 0px auto;
+	opacity: .9;
+	color: whitesmoke;
+	padding: 10px;
 }
