@@ -80,11 +80,11 @@ form .login
 /*-----------------------------------registration--------------------------*/
 .box1
 {
-	height: 540px;
+	height: 550px;
 	width: 450px;
 	background-color: #0d0c0c;
 	margin: 0px auto;
 	opacity: .9;
 	color: whitesmoke;
-	padding: 8px;
+	padding-top: 10px;
 }
