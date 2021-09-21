@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link rel="stylesheet" href="yogi_style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="vatsav_cal_nav.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    <style>
+      *{
+          box-sizing: border-box;
+      }
+      #table{
+          margin-left: 25%;
+          margin-right: 25%;
+          float: left;
+          width: 50%;
+          padding: 5px;
+
+      }
+      #period{
+          margin-left: 38%;
+          margin-right: 38%;
+          float: left;
+          width: 50%;
+          padding: 5px;
+
+      }
+      #table tr:not(:first-child){
+          cursor: pointer;transition: all .25s ease-in-out;
+      }
+      #table tr:not(:first-child):hover{background-color: #ddd;}
+      .data{
+          text-align: left;
+      }
+  </style>
+
+
+  </head>
+  <body>
+
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+    <header>My classes</header> 
+    <ul>
+        
+        <li><a href="#"><i class="fas fa-qrcode"></i>Dashboard</a></li>
+        <li><a href="#"><i class="fas fa-link"></i>Shortcuts</a></li>
+        <li><a href="#"><i class="fas fa-stream"></i>Overview</a></li>
+        <li><a href="#"><i class="fas fa-calender-week"></i>Events</a></li>
+        <li><a href="#"><i class="far fa-question-circle"></i>Abouts</a></li>
+        <li><a href="#"><i class="fas fa-sliders-h"></i>Services</a></li>
+        <li><a href="#"><i class="far fa-envelope"></i>Contact</a></li>
+        
+    </ul>
+    </div>
+    <section></section>
+
+
+    <div class="container">
+      <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+      </div>
+    </div>
+    <br>
+    <br>
+
+
+    <script src="script.js"></script><table id="table" border="1">
+
+      
+            
+      <tr>
+          <th>First Name0</th>
+          <th>First Name1</th>
+          <th>First Name2</th>
+          <th>First Name3</th>
+          <th>First Name4</th>
+          <th>First Name5</th>
+      </tr>
+      
+      <tr>
+          <td>FN0</td>
+          <td>FN1</td>
+          <td>FN2</td>
+          <td>FN3</td>
+          <td>FN4</td>
+          <td>FN5</td>
+      </tr>
+      
+      <tr style="background-color: #ddd">
+          <td>LN0</td>
+          <td>LN1</td>
+          <td>LN2</td>
+          <td>LN3</td>
+          <td>LN4</td>
+          <td>LN5</td>
+      </tr>
+      
+      
+      
+  </table>
+  <div id="period" class="data"><br><br><br><br><br><br>
+  First Name0:<input type="text" name="fname" id="fname"><br><br>
+  First Name1:<input type="text" name="fname1" id="fname1"><br><br>
+  First Name2:<input type="text" name="fname2" id="fname2"><br><br>
+  First Name3:<input type="text" name="fname3" id="fname3"><br><br>
+  First Name4:<input type="text" name="fname4" id="fname4"><br><br>
+  First Name5:<input type="text" name="fname5" id="fname5"><br><br>
+  <button onclick="editRow();">Edit Row</button><br><br>
+  </div>
+
+
+  
+  
+  
+  <script> 
+      
+      // get selected row
+      // display selected row data in text input
+      
+      var table = document.getElementById("table"),rIndex;
+      
+      for(var i = 1; i < table.rows.length; i++)
+      {
+          table.rows[i].onclick = function()
+          {
+              rIndex = this.rowIndex;
+              console.log(rIndex);
+              
+              document.getElementById("fname").value = this.cells[0].innerHTML;
+              document.getElementById("fname1").value = this.cells[1].innerHTML;
+              document.getElementById("fname2").value = this.cells[2].innerHTML;
+              document.getElementById("fname3").value = this.cells[3].innerHTML;
+              document.getElementById("fname4").value = this.cells[4].innerHTML;
+              document.getElementById("fname5").value = this.cells[5].innerHTML;
+          };
+      }
+      
+      
+     // edit the row
+      function editRow()
+      {
+          table.rows[rIndex].cells[0].innerHTML = document.getElementById("fname").value;
+          table.rows[rIndex].cells[1].innerHTML = document.getElementById("fname1").value;
+          table.rows[rIndex].cells[2].innerHTML = document.getElementById("fname2").value;
+          table.rows[rIndex].cells[3].innerHTML = document.getElementById("fname3").value;
+          table.rows[rIndex].cells[4].innerHTML = document.getElementById("fname4").value;
+          table.rows[rIndex].cells[5].innerHTML = document.getElementById("fname5").value;
+      }
+      
+  </script>    
+
+
+
+
+
+
+    
+  </body>
+</html>
